@@ -120,7 +120,7 @@ Run This Command:
 
 ```sh
   cd my-folder
-  git clone https://github.com/Abdulwhbhussain/todo-list-webpack5.git
+  git clone https://github.com/Abdulwhbhussain/Math-Magicians-React-App.git
 ```
 
 
