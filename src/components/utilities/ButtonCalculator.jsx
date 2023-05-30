@@ -4,7 +4,12 @@ import styled from 'styled-components';
 
 // styled-components
 const ButtonStyled = styled.button`
-  width: 25%;
+  width: ${(props) => {
+    if (props.name === '0') {
+      return '50%';
+    }
+    return '25%';
+  }};
   height: 100px;
   font-size: 1.5rem;
   font-weight: bold;
@@ -14,7 +19,7 @@ const ButtonStyled = styled.button`
     }
     return '#d3d3d3';
   }};
-  color: '#000000';
+  color: #000000;
   cursor: pointer;
   outline: none;
   &:hover {
@@ -29,7 +34,7 @@ const ButtonStyled = styled.button`
 
 // Calculator Button Reusable Styled Component
 const ButtonCalculator = ({ name, variant }) => (
-  <ButtonStyled variant={variant}>
+  <ButtonStyled variant={variant} name={name}>
     {name}
   </ButtonStyled>
 );

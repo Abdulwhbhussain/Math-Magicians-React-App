@@ -5,8 +5,10 @@ import ButtonCalculator from './utilities/ButtonCalculator';
 
 // styled-component
 const CalculatorStyled = styled.div`
-  width: 100%;
-  height: 500px;
+  margin: 0 auto;
+  padding-top: 150px;
+  width: 50%;
+  height: 100vh;
   p {
     height: 100px;
     font-size: 3rem;
@@ -19,7 +21,6 @@ const CalculatorStyled = styled.div`
     align-items: center;
     justify-content: flex-end;
   }
-  
 `;
 
 const Calculator = () => (
@@ -41,7 +42,7 @@ const Calculator = () => (
     <ButtonCalculator className="two" name="2" />
     <ButtonCalculator className="three" name="3" />
     <ButtonCalculator className="plus" name="+" variant="orange" />
-    <ButtonCalculator className="zero" name="0" />
+    <ButtonCalculator style={{ width: '50%' }} className="zero" name="0" />
     <ButtonCalculator className="dot" name="." />
     <ButtonCalculator className="equal" name="=" variant="orange" />
   </CalculatorStyled>
