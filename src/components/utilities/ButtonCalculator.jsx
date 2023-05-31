@@ -33,8 +33,8 @@ const ButtonStyled = styled.button`
   }`;
 
 // Calculator Button Reusable Styled Component
-const ButtonCalculator = ({ name, variant }) => (
-  <ButtonStyled variant={variant} name={name}>
+const ButtonCalculator = ({ name, variant, onClick }) => (
+  <ButtonStyled variant={variant} name={name} onClick={onClick}>
     {name}
   </ButtonStyled>
 );
@@ -46,6 +46,7 @@ ButtonCalculator.defaultProps = {
 ButtonCalculator.propTypes = {
   name: PropTypes.string.isRequired,
   variant: PropTypes.string,
+  onClick: PropTypes.func.isRequired,
 };
 
 export default ButtonCalculator;

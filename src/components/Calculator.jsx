@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import ButtonCalculator from './utilities/ButtonCalculator';
-// import InputCalculator from './utilities/InputCalculator';
+import calculate from './logic/calculate';
 
 // styled-component
 const CalculatorStyled = styled.div`
@@ -23,29 +23,39 @@ const CalculatorStyled = styled.div`
   }
 `;
 
-const Calculator = () => (
-  <CalculatorStyled>
-    <p>0</p>
-    <ButtonCalculator className="ac" name="AC" />
-    <ButtonCalculator className="plusMinus" name="+/-" />
-    <ButtonCalculator className="percent" name="%" />
-    <ButtonCalculator className="divide" name="/" variant="orange" />
-    <ButtonCalculator className="seven" name="7" />
-    <ButtonCalculator className="eight" name="8" />
-    <ButtonCalculator className="nine" name="9" />
-    <ButtonCalculator className="multiply" name="*" variant="orange" />
-    <ButtonCalculator className="four" name="4" />
-    <ButtonCalculator className="five" name="5" />
-    <ButtonCalculator className="six" name="6" />
-    <ButtonCalculator className="minus" name="-" variant="orange" />
-    <ButtonCalculator className="one" name="1" />
-    <ButtonCalculator className="two" name="2" />
-    <ButtonCalculator className="three" name="3" />
-    <ButtonCalculator className="plus" name="+" variant="orange" />
-    <ButtonCalculator style={{ width: '50%' }} className="zero" name="0" />
-    <ButtonCalculator className="dot" name="." />
-    <ButtonCalculator className="equal" name="=" variant="orange" />
-  </CalculatorStyled>
-);
+const Calculator = () => {
+  const [obj, setObj] = useState('');
+  let result = obj.total || obj.next || '0';
+
+  const handleClick = (e) => {
+    const { name } = e.target;
+    result = setObj(calculate(obj, name));
+  };
+
+  return (
+    <CalculatorStyled>
+      <p>{result}</p>
+      <ButtonCalculator className="ac" name="AC" onClick={handleClick} />
+      <ButtonCalculator className="plusMinus" name="+/-" onClick={handleClick} />
+      <ButtonCalculator className="percent" name="%" onClick={handleClick} />
+      <ButtonCalculator className="divide" name="÷" variant="orange" onClick={handleClick} />
+      <ButtonCalculator className="seven" name="7" onClick={handleClick} />
+      <ButtonCalculator className="eight" name="8" onClick={handleClick} />
+      <ButtonCalculator className="nine" name="9" onClick={handleClick} />
+      <ButtonCalculator className="multiply" name="x" variant="orange" onClick={handleClick} />
+      <ButtonCalculator className="four" name="4" onClick={handleClick} />
+      <ButtonCalculator className="five" name="5" onClick={handleClick} />
+      <ButtonCalculator className="six" name="6" onClick={handleClick} />
+      <ButtonCalculator className="minus" name="-" variant="orange" onClick={handleClick} />
+      <ButtonCalculator className="one" name="1" onClick={handleClick} />
+      <ButtonCalculator className="two" name="2" onClick={handleClick} />
+      <ButtonCalculator className="three" name="3" onClick={handleClick} />
+      <ButtonCalculator className="plus" name="+" variant="orange" onClick={handleClick} />
+      <ButtonCalculator style={{ width: '50%' }} className="zero" name="0" onClick={handleClick} />
+      <ButtonCalculator className="dot" name="." onClick={handleClick} />
+      <ButtonCalculator className="equal" name="=" variant="orange" onClick={handleClick} />
+    </CalculatorStyled>
+  );
+};
 
 export default Calculator;
