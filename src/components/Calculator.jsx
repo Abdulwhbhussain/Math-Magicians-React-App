@@ -8,7 +8,7 @@ const CalculatorStyled = styled.div`
   margin: 0 auto;
   padding-top: 150px;
   width: 50%;
-  height: 100vh;
+  margin-bottom: 100px;
   p {
     height: 100px;
     font-size: 3rem;
