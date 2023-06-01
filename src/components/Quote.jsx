@@ -55,7 +55,7 @@ const Quote = () => {
     return (() => {
       setQuote({});
     });
-  }, [setQuote, setIsLoading]);
+  }, [setQuote, setIsLoading, setHasError]);
 
   if (hasError) {
     return <div>Something went wrong...</div>;
