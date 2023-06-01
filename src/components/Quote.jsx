@@ -28,23 +28,42 @@ const url = 'https://api.api-ninjas.com/v1/quotes?category=computers';
 
 const Quote = () => {
   const [quote, setQuote] = useState({});
+  const [isLoading, setIsLoading] = useState(false);
+  const [hasError, setHasError] = useState(false);
 
   useEffect(() => {
     // Get Api Quote Response with myApiKey
-    fetch(url, {
-      method: 'GET',
-      headers: {
-        'X-Api-Key': myApiKey,
-        'Content-Type': 'application/json',
-      },
-    }).then((res) => res.json()).then((data) => {
-      setQuote(data[0]);
-    });
+    const fetchData = async () => {
+      setIsLoading(true);
+      try {
+        const res = await fetch(url, {
+          method: 'GET',
+          headers: {
+            'X-Api-Key': myApiKey,
+            'Content-Type': 'application/json',
+          },
+        });
+        const json = await res.json();
+        setQuote(json[0]);
+      } catch (error) {
+        setHasError(true);
+      }
+      setIsLoading(false);
+    };
+    fetchData();
 
     return (() => {
       setQuote({});
     });
-  }, [setQuote]);
+  }, [setQuote, setIsLoading]);
+
+  if (hasError) {
+    return <div>Something went wrong...</div>;
+  }
+
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <QuoteStyled>
