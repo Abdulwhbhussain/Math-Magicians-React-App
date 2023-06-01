@@ -8,7 +8,7 @@ const QuoteStyled = styled.div`
   border: 3px solid #000000;
   color: #000000;
   background-color: #d3d3d3;
-  margin-bottom: 100px;
+  margin-bottom: 70px;
   padding: 20px 40px;
   q {
     font-size: 2rem;
