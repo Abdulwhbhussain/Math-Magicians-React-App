@@ -40,6 +40,10 @@ const Quote = () => {
     }).then((res) => res.json()).then((data) => {
       setQuote(data[0]);
     });
+
+    return (() => {
+      setQuote({});
+    });
   }, [setQuote]);
 
   return (
