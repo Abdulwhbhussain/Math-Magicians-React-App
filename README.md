@@ -48,7 +48,7 @@
 
 # 📖 Microverse Math Magicians React Project Module 3 <a name="about-project"></a>
 
-This is My Math Magicians Project of Module 3 in Microverse which is A Dynamic and Responsive Web Application that allows the user to use calculator to perform simple Calculations. it contains 3 components home, calculator, quote. it is built with React and Redux.   
+This is My Math Magicians Project of Module 3 in Microverse which is A Dynamic and Responsive Web Application that allows the user to use calculator to perform simple Calculations. it contains 3 components home, calculator, quote. it is built with React and Redux. Use 'vercel --prod' to deploy the project to production. 
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -151,7 +151,7 @@ To run the project, execute the following command:
 
 > Here is the Link to this Live Project:
 
-> Coming Soon!
+> https://math-magicians-react-app.vercel.app/
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
