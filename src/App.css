@@ -1,0 +1,9 @@
+.App {
+  /* text-align: center; */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 3rem;
+}
