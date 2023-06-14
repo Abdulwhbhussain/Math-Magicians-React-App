@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import ButtonCalculator from './utilities/ButtonCalculator';
 import calculate from './logic/calculate';
+import './CalculatorComponent.css';
 
 // styled-component
 const CalculatorStyled = styled.div`
@@ -33,7 +34,7 @@ const Calculator = () => {
   };
 
   return (
-    <CalculatorStyled>
+    <CalculatorStyled className="calculator-responsive">
       <p>{result}</p>
       <ButtonCalculator className="ac" name="AC" onClick={handleClick} />
       <ButtonCalculator className="plusMinus" name="+/-" onClick={handleClick} />
