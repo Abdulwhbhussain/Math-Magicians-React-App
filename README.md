@@ -168,6 +168,12 @@ To run the project, execute the following command:
 - Twitter: [@twitterhandle](https://twitter.com/AbdulWhbHussain)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/abdulwhbhussain)
 
+👤 **Omaidu Othniel**
+
+- GitHub: [@githubhandle](https://github.com/othniel2471)
+- Twitter: [@twitterhandle](https://github.com/othniel2471)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/othniel-omaidu-3350a9164)
+
 
 <!-- FUTURE FEATURES -->
 
